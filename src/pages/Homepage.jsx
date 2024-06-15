@@ -103,7 +103,9 @@ function Homepage() {
                 </section>
 
                 <footer className="w-full max-w-3xl bg-white dark:bg-zinc-800 rounded shadow-md my-4 p-4 sm:p-6 text-center">
-                    <button className="bg-blue-500 text-white px-6 py-3 rounded-lg">Make a confession</button>
+                    <Link to={'confessions'}>
+                    <button className="bg-blue-500 text-white px-6 py-3 rounded-lg">View secrets</button>
+                    </Link>
                 </footer>
             </div>
         </div>
