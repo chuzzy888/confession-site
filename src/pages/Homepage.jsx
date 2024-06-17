@@ -1,17 +1,14 @@
-import React from 'react'
+import React from 'react';
 import { BiLike } from "react-icons/bi";
 import { AiOutlineDislike } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
-
-
 function Homepage() {
     return (
         <div>
-           <Navbar/>
-            <div className="min-h-screen  md:p-4 p-2 flex flex-col items-center dark:bg-zinc-900">
-
+            <Navbar />
+            <div className="min-h-screen md:p-4 p-2 flex flex-col items-center dark:bg-zinc-900">
                 <section className="w-full max-w-3xl bg-white dark:bg-zinc-800 rounded shadow-md my-4 p-4 sm:p-6 ">
                     <img className="w-full h-64 object-cover rounded" src="https://images.pexels.com/photos/5206850/pexels-photo-5206850.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Confess and be heard" />
                     <div className="text-center mt-4 sm:mt-6">
@@ -103,13 +100,13 @@ function Homepage() {
                 </section>
 
                 <footer className="w-full max-w-3xl bg-white dark:bg-zinc-800 rounded shadow-md my-4 p-4 sm:p-6 text-center">
-                    <Link to={'confessions'}>
-                    <button className="bg-blue-500 text-white px-6 py-3 rounded-lg">View secrets</button>
+                    <Link to={'/confessions'}>
+                        <button className="bg-blue-500 text-white px-6 py-3 rounded-lg">View secrets</button>
                     </Link>
                 </footer>
             </div>
         </div>
-    )
+    );
 }
 
-export default Homepage
+export default Homepage;

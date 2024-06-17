@@ -9,10 +9,10 @@ function ProtectedRoute({ children }) {
 
   if (loading) {
     return <div className='h-screen flex justify-center items-center bg-black'>
-      <div class="loader">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+      <div className="loader">
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
       </div>
     </div>;
   }

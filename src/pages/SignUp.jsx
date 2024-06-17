@@ -1,24 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../firebaseConfig';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { UserContext } from '../App';
 
 function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      await updateProfile(user, { displayName: name }); 
+      const userData = { name, email: user.email };
+      setUser(userData);
+      localStorage.setItem('user', JSON.stringify(userData));
       toast.success('Sign up successful!');
       setTimeout(() => {
-        navigate('/login');
-      }, 2000); 
+        navigate('/');
+      }, 2000);
     } catch (error) {
       toast.error('Error signing up: ' + error.message);
     }
@@ -26,9 +33,9 @@ function SignUp() {
 
   return (
     <div>
-      <div className="min-h-screen flex items-center justify-center bg-zinc-100 p-5">
-        <div className="flex bg-white rounded-lg shadow-md overflow-hidden w-full max-w-4xl">
-          <div className="hidden md:block w-1/2 bg-zinc-100 flex items-center justify-center">
+      <div className="min-h-screen flex  items-center justify-center bg-zinc-100 p-5">
+        <div className="flex md:flex-row flex-col bg-white rounded-lg shadow-md overflow-hidden w-full max-w-4xl">
+          <div className=" md:w-1/2 bg-zinc-100 flex items-center justify-center">
             <img
               src="https://images.pexels.com/photos/5997003/pexels-photo-5997003.jpeg?auto=compress&cs=tinysrgb&w=600"
               alt="Placeholder"
