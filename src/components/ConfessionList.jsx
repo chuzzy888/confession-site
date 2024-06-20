@@ -52,10 +52,10 @@ function ConfessionList() {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="flex flex-col md:flex-row items-center justify-between sticky top-0 z-50 p-4 bg-zinc-100 dark:bg-zinc-800 space-y-4 md:space-y-0">
+      <div className="flex flex-col md:flex-row items-center justify-between sticky top-0 z-50 p-4 bg-zinc-100  space-y-4 md:space-y-0">
         <div className="flex items-center space-x-4">
           <Link to={"/"}>
-            <button className="flex items-center space-x-2 px-4 py-2 bg-black text-white rounded-md hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:bg-zinc-700">
+            <button className="flex items-center space-x-2 px-4 py-2 bg-black text-white rounded-md hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-offset-2 ">
               <svg
                 undefinedhidden="true"
                 alt="back-arrow"
@@ -75,22 +75,20 @@ function ConfessionList() {
               <span>Go Back</span>
             </button>
           </Link>
-          <h1 className="text-xl font-semibold text-zinc-900 dark:text-white">
-            Confessions
-          </h1>
+          <h1 className="text-xl font-semibold text-zinc-900 ">Confessions</h1>
         </div>
         <div className="relative w-full md:w-auto ">
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 border rounded-md bg-white dark:bg-zinc-700 placeholder-zinc-400 dark:placeholder-zinc-500 text-zinc-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="w-full pl-10 pr-4 py-2 border rounded-md bg-white  placeholder-zinc-400  text-zinc-900  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             placeholder="Search confessions..."
           />
           <svg
             undefinedhidden="true"
             alt="search-icon"
-            className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zinc-400 dark:text-zinc-500"
+            className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zinc-400 "
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -112,7 +110,7 @@ function ConfessionList() {
           currentConfessions.map((confession) => (
             <div
               key={confession.id}
-              className="bg-white dark:bg-zinc-800 p-6 rounded-lg shadow-lg relative"
+              className="bg-white  p-6 rounded-lg shadow-lg relative"
             >
               <span className="absolute top-2 right-2 px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full">
                 {confession.category}
@@ -120,9 +118,7 @@ function ConfessionList() {
               <h2 className="text-xl font-semibold mb-4">
                 "{confession.title}"
               </h2>
-              <p className="mb-4 text-gray-700 dark:text-gray-300">
-                {confession.confession}
-              </p>
+              <p className="mb-4 text-gray-700 ">{confession.confession}</p>
               <div className="flex items-center space-x-2 m-2">
                 <button className="text-green-500">
                   <BiLike />
@@ -133,10 +129,10 @@ function ConfessionList() {
               </div>
               <hr className="p-1" />
               <div className="flex justify-between items-center">
-                <p className="text-sm text-white  p-1 rounded-md dark:text-gray-400 bg-black">
+                <p className="text-sm text-white  p-1 rounded-md  bg-black">
                   {confession.anonymous ? "Anonymous" : "Known"}
                 </p>
-                <p className="text-sm text-gray-500 dark:text-gray-400 underline">
+                <p className="text-sm text-gray-500  underline">
                   {confession.timestamp
                     ? new Date(confession.timestamp).toLocaleDateString()
                     : "No Date"}
@@ -145,7 +141,7 @@ function ConfessionList() {
             </div>
           ))
         ) : (
-          <div className="col-span-full text-center text-gray-500 dark:text-gray-400">
+          <div className="col-span-full text-center text-gray-500 ">
             No search results found.
           </div>
         )}

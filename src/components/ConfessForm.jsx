@@ -52,19 +52,16 @@ function ConfessForm() {
           </p>
         </div>
       </div>
-      <div className="w-full max-w-full lg:max-w-lg bg-white dark:bg-zinc-800 rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-bold mb-2 text-zinc-900 dark:text-zinc-100">
+      <div className="w-full max-w-full lg:max-w-lg bg-white  rounded-lg shadow-md p-6">
+        <h2 className="text-xl font-bold mb-2 text-zinc-900 ">
           Confess Your Secrets
         </h2>
-        <p className="text-zinc-600 dark:text-zinc-400 mb-4">
+        <p className="text-zinc-600  mb-4">
           Share your deepest thoughts and feelings anonymously.
         </p>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label
-              className="block text-zinc-700 dark:text-zinc-400 mb-2"
-              htmlFor="title"
-            >
+            <label className="block text-zinc-700  mb-2" htmlFor="title">
               Headline
             </label>
             <input
@@ -72,40 +69,34 @@ function ConfessForm() {
               id="title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="w-full px-3 py-2 text-zinc-700 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900 border rounded-md focus:outline-none focus:ring focus:border-blue-300 dark:focus:border-blue-700"
+              className="w-full px-3 py-2 text-zinc-700  bg-zinc-100 border rounded-md focus:outline-none focus:ring focus:border-blue-300 "
               placeholder="Title of your confession"
             />
           </div>
 
           <div className="mb-4">
-            <label
-              className="block text-zinc-700 dark:text-zinc-400 mb-2"
-              htmlFor="confession"
-            >
+            <label className="block text-zinc-700  mb-2" htmlFor="confession">
               Your Confession
             </label>
             <textarea
               id="confession"
               value={confession}
               onChange={(e) => setConfession(e.target.value)}
-              className="w-full px-3 py-2 text-zinc-700 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900 border rounded-md focus:outline-none focus:ring focus:border-blue-300 dark:focus:border-blue-700"
+              className="w-full px-3 py-2 text-zinc-700  bg-zinc-100  border rounded-md focus:outline-none focus:ring focus:border-blue-300 "
               rows="4"
               placeholder="Type your confession here..."
             ></textarea>
           </div>
 
           <div className="mb-4">
-            <label
-              className="block text-zinc-700 dark:text-zinc-400 mb-2"
-              htmlFor="category"
-            >
+            <label className="block text-zinc-700  mb-2" htmlFor="category">
               Confession Category
             </label>
             <select
               id="category"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="w-full px-3 py-2 text-zinc-700 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900 border rounded-md focus:outline-none focus:ring focus:border-blue-300 dark:focus:border-blue-700"
+              className="w-full px-3 py-2 text-zinc-700  bg-zinc-100  rounded-md focus:outline-none focus:ring focus:border-blue-300 "
             >
               <option>Select a category</option>
               <option>Lies</option>
@@ -124,10 +115,7 @@ function ConfessForm() {
               onChange={() => setAnonymous(!anonymous)}
               className="mr-2"
             />
-            <label
-              className="text-zinc-700 dark:text-zinc-400"
-              htmlFor="anonymous"
-            >
+            <label className="text-zinc-700 " htmlFor="anonymous">
               Hide My Identity
             </label>
           </div>
@@ -135,7 +123,7 @@ function ConfessForm() {
           <div className="flex justify-end">
             <button
               type="submit"
-              className="px-4 py-2 bg-black text-white dark:bg-zinc-700 rounded-md hover:bg-zinc-800 focus:outline-none focus:bg-zinc-800 dark:focus:bg-zinc-600"
+              className="px-4 py-2 bg-black text-white  rounded-md hover:bg-zinc-800 focus:outline-none focus:bg-zinc-800 "
             >
               Submit Confession
             </button>
