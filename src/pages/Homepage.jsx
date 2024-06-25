@@ -31,7 +31,7 @@ function Homepage() {
           </div>
         </section>
 
-        <section className="w-full max-w-3xl bg-white dark:bg-zinc-800 rounded shadow-md my-4 p-4 sm:p-6">
+        {/* <section className="w-full max-w-3xl bg-white dark:bg-zinc-800 rounded shadow-md my-4 p-4 sm:p-6">
           <h2 className="text-xl font-bold mb-4 dark:text-white">
             Why use Confess.io?
           </h2>
@@ -170,7 +170,91 @@ function Homepage() {
               </div>
             </div>
           </div>
+        </section> */}
+
+        <section className="bg-card p-6 rounded-lg shadow-md w-full max-w-3xl">
+          <h3 className="text-2xl font-semibold mb-4">Recent Confessions</h3>
+          <div className="space-y-4">
+            <div className="p-4 bg-secondary text-secondary-foreground rounded-md shadow">
+              <p>
+                "I accidentally broke my friend's favorite mug and blamed it on
+                the cat."
+              </p>
+              <p className="text-sm text-muted-foreground mt-2">- Anonymous</p>
+            </div>
+            <div className="p-4 bg-secondary text-secondary-foreground rounded-md shadow">
+              <p>"I have had a crush on my best friend for years."</p>
+              <p className="text-sm text-muted-foreground mt-2">- Anonymous</p>
+            </div>
+            <div className="p-4 bg-secondary text-secondary-foreground rounded-md shadow">
+              <p>"I lied on my resume to get my current job."</p>
+              <p className="text-sm text-muted-foreground mt-2">- Anonymous</p>
+            </div>
+          </div>
         </section>
+
+        <section
+          id="about"
+          className="w-full my-2 max-w-3xl bg-white text-popover-foreground p-6 rounded-lg shadow-md space-y-4"
+        >
+          <h3 className="text-2xl font-semibold">About Us</h3>
+          <p className="text-muted-foreground">
+            Confess.io is a safe haven for sharing your deepest secrets without
+            fear of judgement or exposure. Our mission is to provide a platform
+            where people can unburden their hearts anonymously.
+          </p>
+        </section>
+
+        <footer
+          id="contact"
+          className="w-full max-w-3xl bg-card text-card-foreground p-4 rounded-lg shadow-md mt-8"
+        >
+          <h4 className="text-lg font-semibold mb-2">Contact Us</h4>
+          <form className="space-y-4">
+            <div className="flex flex-col space-y-2">
+              <label htmlFor="name" className="text-sm">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                className="bg-input text-foreground p-2 rounded-md border border-border"
+                placeholder="Your Name"
+              />
+            </div>
+            <div className="flex flex-col space-y-2">
+              <label htmlFor="email" className="text-sm">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                className="bg-input text-foreground p-2 rounded-md border border-border"
+                placeholder="your.email@example.com"
+              />
+            </div>
+            <div className="flex flex-col space-y-2">
+              <label htmlFor="message" className="text-sm">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                className="bg-input text-foreground p-2 rounded-md border border-border"
+                placeholder="Your Message..."
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-6 py-2 rounded-lg shadow transition"
+            >
+              Send Message
+            </button>
+          </form>
+        </footer>
 
         <footer className="w-full max-w-3xl bg-white dark:bg-zinc-800 rounded shadow-md my-4 p-4 sm:p-6 text-center">
           <Link to={"/confessions"}>
