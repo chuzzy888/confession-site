@@ -84,7 +84,7 @@ function Homepage() {
           </div>
         </section>
         <Link to={"/confessions"}>
-          <button className="mt-4 text-black underline  px-4 m-2  rounded-lg w-full">
+          <button className="mt-4 text-violet-900 underline  px-4 m-2 md:hidden  rounded-lg w-full">
             View secrets
           </button>
         </Link>
