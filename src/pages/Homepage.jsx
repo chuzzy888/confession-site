@@ -52,11 +52,11 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 function Homepage() {
-  const [showSecrets, setShowSecrets] = useState(false);
+  // const [showSecrets, setShowSecrets] = useState(false);
 
-  const toggleSecrets = () => {
-    setShowSecrets(!showSecrets);
-  };
+  // const toggleSecrets = () => {
+  //   setShowSecrets(!showSecrets);
+  // };
 
   return (
     <div>
@@ -83,10 +83,15 @@ function Homepage() {
             </Link>
           </div>
         </section>
+        <Link to={"/confessions"}>
+          <button className="mt-4 text-black underline  px-4 m-2  rounded-lg w-full">
+            View secrets
+          </button>
+        </Link>
 
-        <div className="w-full max-w-3xl rounded shadow-md my-4 p-4 sm:p-6 text-center md:hidden flex justify-center items-center">
+        {/* <div className="w-full max-w-3xl rounded shadow-md my-4 p-4 sm:p-6 text-center md:hidden flex justify-center items-center">
           <button
-            className="flex items-center justify-center bg-black text-white p-2 px-2 rounded-full h-10 w-10"
+            className="flex items-center justify-center bg-black text-white p-2 px-2 rounded-full h-10 w-10 "
             onClick={toggleSecrets}
           >
             {showSecrets ? "" : ""}
@@ -110,7 +115,7 @@ function Homepage() {
               </Link>
             </div>
           )}
-        </div>
+        </div> */}
       </div>
     </div>
   );
