@@ -61,18 +61,16 @@ function Homepage() {
   return (
     <div>
       <Navbar />
-      <div className="min-h-screen md:p-4 p-2 flex flex-col items-center dark:bg-zinc-900">
-        <section className="w-full max-w-3xl bg-white dark:bg-zinc-800 rounded shadow-md my-4 p-4 sm:p-6 ">
+      <div className="min-h-screen md:p-4 p-2 flex flex-col items-center ">
+        <section className="w-full max-w-3xl bg-white  rounded shadow-md my-4 p-4 sm:p-6 ">
           <img
             className="w-full h-64 object-cover rounded"
             src="https://images.pexels.com/photos/5206850/pexels-photo-5206850.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt="Confess and be heard"
           />
           <div className="text-center mt-4 sm:mt-6">
-            <h1 className="text-2xl font-bold dark:text-white">
-              Confess and be heard
-            </h1>
-            <p className="text-zinc-600 dark:text-zinc-400 mt-2">
+            <h1 className="text-2xl font-bold ">Confess and be heard</h1>
+            <p className="text-zinc-600  mt-2">
               Confess your deepest secrets anonymously, and connect with people
               who understand. Become a listener and help others feel less alone.
             </p>
