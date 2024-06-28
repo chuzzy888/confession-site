@@ -171,7 +171,7 @@ function Homepage() {
             </div>
           </div>
         </section> */}
-
+        {/* 
         <section className="bg-card p-6 rounded-lg shadow-md w-full max-w-3xl">
           <h3 className="text-2xl font-semibold mb-4">Recent Confessions</h3>
           <div className="space-y-4">
@@ -254,15 +254,15 @@ function Homepage() {
               Send Message
             </button>
           </form>
-        </footer>
+        </footer> */}
 
-        <footer className="w-full max-w-3xl bg-white dark:bg-zinc-800 rounded shadow-md my-4 p-4 sm:p-6 text-center">
+        {/* <footer className="w-full max-w-3xl bg-white dark:bg-zinc-800 rounded shadow-md my-4 p-4 sm:p-6 text-center">
           <Link to={"/confessions"}>
             <button className="bg-blue-500 text-white px-6 py-3 rounded-lg">
               View secrets
             </button>
           </Link>
-        </footer>
+        </footer> */}
       </div>
     </div>
   );
