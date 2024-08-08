@@ -60,19 +60,26 @@ function Homepage() {
 
   return (
     <div>
-      <Navbar />
-      <div className="min-h-screen md:p-4 p-2 flex flex-col items-center ">
-        <section className="w-full max-w-3xl bg-white  rounded shadow-md my-4 p-4 sm:p-6 ">
+      <div className="  md:p-4 p-2 flex justify-center items-center flex-col items-center ">
+        <div className="w-full">
+          {" "}
+          <Navbar />
+        </div>
+        <section className="w-full  bg-white  rounded shadow-md my-4 p-4 sm:p-6 ">
           <img
-            className="w-full h-64 object-cover rounded"
-            src="https://images.pexels.com/photos/5206850/pexels-photo-5206850.jpeg?auto=compress&cs=tinysrgb&w=600"
+            className="w-full h-full object-cover rounded"
+            // src="https://images.pexels.com/photos/5206850/pexels-photo-5206850.jpeg?auto=compress&cs=tinysrgb&w=600"
+            src="https://mentcouch.com/wp-content/uploads/2021/08/confession-page-02-1920x640.png"
             alt="Confess and be heard"
           />
           <div className="text-center mt-4 sm:mt-6">
-            <h1 className="text-2xl font-bold ">Confess and be heard</h1>
-            <p className="text-zinc-600  mt-2">
+            <h1 className="text-2xl font-bold ">Unburden Your Soul</h1>
+            <p className="text-zinc-600  mt-2 mx-8 text-sm md:text-lg">
               Confess your deepest secrets anonymously, and connect with people
               who understand. Become a listener and help others feel less alone.
+              Share your deepest secrets, fears, and regrets in a safe and
+              judgment-free space. Find solace in the stories of others and the
+              power of confession.
             </p>
             <Link to={"/confess"}>
               <button className="mt-4 bg-blue-500 text-white px-6 py-3 rounded-lg">

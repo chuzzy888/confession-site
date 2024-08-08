@@ -5,6 +5,7 @@ import { auth } from "../firebaseConfig";
 import { signOut } from "firebase/auth";
 import { TbLogout2 } from "react-icons/tb";
 import { MdAccountCircle } from "react-icons/md";
+import lg from "../assets/lg.png";
 
 function Navbar() {
   const { user, setUser } = useContext(UserContext);
@@ -27,11 +28,11 @@ function Navbar() {
   };
 
   return (
-    <div className="bg-zinc-100 md:p-4 flex flex-col items-center sticky top-0 z-50 shadow-xl md:shadow-none">
-      <header className="w-full max-w-3xl flex justify-between items-center p-2 bg-white  rounded sm:p-4  ">
-        <div className="text-2xl font-bold">
+    <div className="bg-zinc-100 md:p-4 flex flex-col items-center sticky top-0  shadow-xl md:shadow-none">
+      <header className="w-full  flex justify-between items-center p-2 md:h-10  rounded sm:p-4  ">
+        <div className="text-2xl font-bold ">
           <Link to="/" className="text-black ">
-            Confess.io
+            <img src={lg} alt="" className="md:h-20 h-12" />
           </Link>
         </div>
         <nav className="flex space-x-4 md:block hidden">
